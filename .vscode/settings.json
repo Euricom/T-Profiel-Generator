@@ -1,0 +1,7 @@
+{
+  "files.autoSave": "onFocusChange",
+  "editor.formatOnSave": true,
+  "extensions.ignoreRecommendations": true,
+  "debug.allowBreakpointsEverywhere": true,
+  "eslint.validate": ["javascript", "vue"]
+}
