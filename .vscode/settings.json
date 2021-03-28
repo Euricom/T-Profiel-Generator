@@ -3,5 +3,8 @@
   "editor.formatOnSave": true,
   "extensions.ignoreRecommendations": true,
   "debug.allowBreakpointsEverywhere": true,
-  "eslint.validate": ["javascript", "vue"]
+  "eslint.validate": ["javascript", "vue"],
+  "path-intellisense.mappings": {
+    "@/": "${workspaceRoot}/src"
+  }
 }
