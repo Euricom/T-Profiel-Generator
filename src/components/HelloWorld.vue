@@ -27,9 +27,9 @@
 </template>
 
 <script lang="ts">
-import { ref, defineComponent } from 'vue';
+import { ref } from 'vue';
 
-export default defineComponent({
+export default {
   name: 'HelloWorld',
   props: {
     msg: {
@@ -41,7 +41,7 @@ export default defineComponent({
     const count = ref(0);
     return { count };
   },
-});
+};
 </script>
 
 <style scoped>
