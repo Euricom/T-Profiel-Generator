@@ -1,8 +1,10 @@
 <template>
-  <div class="footer">
+  <div v-if="!store.state.isCookiesAllowed" id="footer">
     <div class="footer--content">
       This site would like to use cookies to provide you with a better user experience.
-      <Button class="p-button-text p-button-raised p-button-rounded p-button-secondary footer--acceptBtn"
+      <Button
+        class="p-button-text p-button-raised p-button-rounded p-button-secondary footer--acceptBtn"
+        @click="store.actions.allowCookies"
         >Allow &amp; close</Button
       >
     </div>
@@ -10,13 +12,20 @@
 </template>
 
 <script lang="ts">
+import { inject } from 'vue';
+import { Store } from '@/store/types';
+
 export default {
   name: 'CookieFooter',
+  setup: () => {
+    const store = inject<Store>('store');
+    return { store };
+  },
 };
 </script>
 
 <style lang="scss" scoped>
-@keyframes pop-up {
+@keyframes show {
   from {
     bottom: -100px;
   }
@@ -25,7 +34,7 @@ export default {
   }
 }
 
-.footer {
+#footer {
   position: absolute;
   bottom: 0;
 
@@ -49,7 +58,7 @@ export default {
   font-size: 18px;
   font-weight: 500;
 
-  animation: pop-up 0.5s ease-in-out;
+  animation: show 0.5s ease-in-out;
 }
 
 .footer--acceptBtn {
