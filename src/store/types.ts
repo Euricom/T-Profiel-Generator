@@ -6,3 +6,8 @@ export interface Actions {
   allowCookies: () => void;
   disallowCookies: () => void;
 }
+
+export type Store = {
+  state: State;
+  actions: Actions;
+};
