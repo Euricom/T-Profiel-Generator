@@ -1,4 +1,5 @@
 import { reactive } from 'vue';
+import { Actions, State } from './types';
 
 const state = reactive<State>({});
 

@@ -1,8 +1,8 @@
-interface State {
+export interface State {
   isCookiesAllowed?: boolean;
 }
 
-interface Actions {
+export interface Actions {
   allowCookies: () => void;
   disallowCookies: () => void;
 }
