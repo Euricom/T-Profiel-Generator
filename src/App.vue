@@ -1,11 +1,18 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png" />
   <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" />
+  <CookieFooter />
 </template>
 
 <script lang="ts">
+import { provide } from 'vue';
+import store from '@/store';
+
 export default {
   name: 'App',
+  setup: () => {
+    provide('store', store);
+  },
 };
 </script>
 
