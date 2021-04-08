@@ -1,10 +1,10 @@
 <template>
-  <div v-if="!store.state.isCookiesAllowed" id="footer">
+  <div v-if="!store?.state.isCookiesAllowed" id="footer">
     <div class="footer--content">
       This site would like to use cookies to provide you with a better user experience.
       <Button
         class="p-button-text p-button-raised p-button-rounded p-button-secondary footer--acceptBtn"
-        @click="store.actions.allowCookies"
+        @click="store?.actions.allowCookies"
         >Allow &amp; close</Button
       >
     </div>
